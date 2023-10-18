@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>    
+    <div class="container">
+        <h1>Примеры веб-разработки</h1>
+        <!-- Конопки для примеров -->
+        <button class="button" id="button1">Пример 1: Нажать на кнопку</button>
+        <button class="button" id="button2">Пример 2: Валидация формы</button>
+        <button class="button" id="button3">Пример 3: Манипуляции с DOM</button>
+        <button class="button" id="button4">Пример 4: Обработчик событий</button>
+        <button class="button" id="button5">Пример 5: Работа с Local Storage</button> 
+        <button class="button" id="button6">Пример 6: Загрузка данных</button>
+
+        <!-- Первый пример -->
+        <div id="example1" style="display: none;">
+            <h2>Пример 1: Нажать на кнопку</h2>
+            <p>Нажмите на кнопку, чтобы увидеть уведомление.</p>
+            <button class="button" id="showAlertButton">Показать уведомление</button>
+        </div>
+
+        <!-- Второй пример -->
+        <div id="example2" style="display: none;">
+            <h2>Пример 2: Валидация формы</h2>
+            <p>Заполните форму ниже и нажмите "Отправить", чтобы увидеть валидацию формы.</p>
+            <form id="example2Form">
+                <div class="form-group">
+                    <label for="name">Имя</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Пароль</label>
+                    <input type="password" id="password" name="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Должно содержать по крайней мере одно число, одну заглавную и строчную буквы, а также не менее 8 и более символов">                    
+                </div>
+
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+
+        <!-- Третий пример -->
+        <div id="example3" style="display: none;">
+            <h2>Пример 3: Манипуляции с DOM</h2>
+            <p>Нажмите кнопку ниже, чтобы изменить текст</p>
+            <button class="button" id="changeTextButton">Изменить текст</button>
+            <p id="textToChange">Этот текст изменится.</p>
+        </div>
+
+        <!-- Четвертый пример -->
+        <div id="example4" style="display: none;">
+            <h2>Пример 4: Обработчик событий</h2>
+            <p>Нажмите кнопку ниже, чтобы добавить обработчик.</p>
+            <button class="button" id="addClickListenerButton">Добавить обработчик событий</button>
+            <p id="listenerStatus">Статус обработчика событий: Отключен</p>
+        </div>
+
+        <!-- Пятый пример -->
+        <div id="example5" style="display: none;">
+            <h2>Пример 5: Работа с Local Storage</h2>
+            <p>Введите ваше имя ниже и нажмите "Сохранить имя" для сохранения в локальном хранилище.</p>
+            <input type="text" id="localStorageName" placeholder="Введите ваше имя"></input>
+            <button class="button" id="saveNameButton">Сохранить имя</button>
+            <p id="localStorageStatus">Имя в локальном хранилище: Нет</p>
+        </div>
+
+        <!-- Шестой пример -->
+        <div id="example6" style="display: none;">
+            <h2>Пример 6: Работа с загрузкой файлов</h2>
+            <p>Нажмите на кнопку для сохранения файла</p>
+            <input type="file" id="path">
+        </div>
+    </div>
+
+    <script src="script.js"></script>    
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Задания из файла, который решали на уроке! -->
+    <!-- Задание номер 1 -->
+    <section id="task01-1"></section>
+
+    <!-- Задание номер 2 -->
+    <section id="task01-2">
+        <h2>Второе задание файла с урока</h2>
+        <form id="myForm">
+            <div style="display: flex; margin-bottom: 10px;">
+                <div class="left">
+                    <label for="email">Ваш email:</label>
+                    <input type="email" name="email" id="email">
+                    <label for="password">Ваш пароль:</label>
+                    <input type="password" id="password" name="password">
+                </div>
+                <div class="right">
+                    <label for="name">Ваш логин</label>
+                    <input type="text" name="name" id="name">
+                    <label for="repeatPassword">Повторите ваш пароль:</label>
+                    <input type="password" id="repeatPassword" name="password">
+                </div>
+            </div>
+            <input type="submit" value="Отправить" style="width: 378px;">
+        </form>        
+    </section>
+
+    <!-- Задания из файла, которые были даны на дом! -->
+    <!-- Задание номер 1 -->
+    <section id="task02-1">
+        <h2>Первое задание файла на ДЗ</h2>
+        <div id="container">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+        </div>
+        <input id="input" type="text" placeholder="your message" />
+        <button id="button">Add new message</button>
+    </section>
+
+    <!-- Задание номер 2 -->
+    <section id="task02-2">
+        <h2>Второе задание файла на ДЗ</h2>
+        <div class="question">
+            <hr>
+            <p class="text-center"><b>ВОПРОС №1: &laquo;В каком году родился Бродский?&raquo;</b></p>
+            <ol>
+              <li><input type="radio" name="quest0" id="a_1"> <label class="form-check-label" for="a_1">В 1926 году</label></li>
+              <li><input type="radio" name="quest0" id="a_2"> <label class="form-check-label" for="a_2">В 1936 году</label></li>
+              <li><input type="radio" name="quest0" id="a_3"> <label class="form-check-label" for="a_3">В 1956 году</label></li>
+              <li><input type="radio" name="quest0" id="a_4"> <label class="form-check-label" for="a_4">В 1986 году</label></li>
+            </ol>
+        </div>
+          
+        <div class="question">
+            <hr>
+            <p class="text-center"><b>ВОПРОС №2: &laquo;В каком году родился Бродский?&raquo;</b></p>
+            <ol>
+              <li><input type="radio" name="quest1" id="a_1"> <label class="form-check-label" for="a_1">В 1926 году</label></li>
+              <li><input type="radio" name="quest1" id="a_2"> <label class="form-check-label" for="a_2">В 1936 году</label></li>
+              <li><input type="radio" name="quest1" id="a_3"> <label class="form-check-label" for="a_3">В 1956 году</label></li>
+              <li><input type="radio" name="quest1" id="a_4"> <label class="form-check-label" for="a_4">В 1986 году</label></li>
+            </ol>
+        </div>
+          
+        <div class="question">
+            <hr>
+            <p class="text-center"><b>ВОПРОС №3: &laquo;В каком году родился Бродский?&raquo;</b></p>
+            <ol>
+              <li><input type="radio" name="quest2" id="a_1"> <label class="form-check-label" for="z_1">В 1926 году</label></li>
+              <li><input type="radio" name="quest2" id="a_2"> <label class="form-check-label" for="a_2">В 1936 году</label></li>
+              <li><input type="radio" name="quest2" id="a_3"> <label class="form-check-label" for="a_3">В 1956 году</label></li>
+              <li><input type="radio" name="quest2" id="a_4"> <label class="form-check-label" for="a_4">В 1986 году</label></li>
+            </ol>
+        </div>
+        <hr>
+          
+        <button class="btn-success btn-lg btn-block" id="apply" onclick="summary();">Получить результат</button>
+    </section>
+
+    <!-- Задание номер 3 -->
+    <section id="task02-3">
+        <h2>Третье задание файла на ДЗ</h2>
+        <label>
+            <input type="checkbox" style="font-weight: bold">
+            <span>Bold</span>
+        </label>
+        <label>
+            <input type="checkbox" style="text-decoration: underline">
+            <span>Underline</span>
+        </label>
+        <label>
+            <input type="checkbox" style="font-style: italic">
+            <span>Italics</span>
+        </label>
+            
+        <label>
+            <input type="radio" name="r" style="text-align: left">
+            <span>Left</span>
+        </label>
+        <label>
+            <input type="radio" name="r" style="text-align: right">
+            <span>Right</span>
+        </label>
+        <label>
+            <input type="radio" name="r" style="text-align: justify">
+            <span>Justify</span>
+        </label><br>
+
+        <textarea id="output" type="text" name="message">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        </textarea>
+
+        <button id="btn" type="button">Save</button>
+    </section>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>

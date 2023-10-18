@@ -1,0 +1,84 @@
+/* Стили для body (основной фон и шрифт) */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2; /* Серый фон */
+    margin: 0;
+    padding: 0;
+}
+
+/* Стили для контейнера страницы */
+.container {
+    width: 80%; /* Ширина контейнера */
+    margin: 0 auto; /* Центрирование по горизонтали */
+    padding: 20px;
+    border: 1px solid #ccc; /* Граничная рамка */
+    border-radius: 5px; /* Скругление углов */
+    background-color: #fff; /* Белый фон контейнера */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень контейнера */
+}
+
+/* Стили для заголовка h1 */
+h1 {
+    text-align: center; /* Выравнивание по центру */
+    color: #007bff; /* Синий цвет текста */
+}
+
+/* Стили для кнопок */
+.button {
+    display: inline-block; /* Кнопка в виде блока */
+    padding: 10px 20px; /* Внутренний отступ кнопки */
+    background-color: #007bff; /* Синий цвет фона кнопки */
+    color: #fff; /* Белый цвет текста */
+    border: none; /* Убираем границу кнопки */
+    border-radius: 3px; /* Скругление углов кнопки */
+    font-size: 16px; /* Размер шрифта */
+    cursor: pointer; /* Изменение курсора при наведении на кнопку */
+    margin: 10px; /* Внешний отступ кнопки */
+}
+
+/* Стили для кнопок при наведении */
+.button:hover {
+    background-color: #0056b3; /* Темно-синий цвет фона при наведении */
+}
+
+/* Стили для группы формы */
+.form-group {
+    margin-bottom: 20px; /* Внешний отступ снизу для группы формы */
+}
+
+/* Стили для меток формы */
+label {
+    display: block; /* Метка как блочный элемент */
+    font-weight: bold; /* Жирное начертание текста метки */
+    margin-bottom: 5px; /* Внешний отступ снизу для метки */
+    color: #333; /* Цвет текста метки */
+}
+
+/* Стили для полей ввода текста, email и пароля */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 90%; /* Ширина поля ввода */
+    padding: 10px; /* Внутренний отступ */
+    border: 1px solid #ccc; /* Граница поля ввода */
+    border-radius: 3px; /* Скругление углов */
+    font-size: 16px; /* Размер шрифта */
+    transition: border-color 0.3s ease; /* Плавное изменение цвета границы при фокусе */
+}
+
+/* Стили для кнопки отправки формы */
+button[type="submit"] {
+    background-color: #007bff; /* Синий цвет фона кнопки отправки */
+    color: #fff; /* Белый цвет текста кнопки */
+    padding: 10px 20px; /* Внутренний отступ кнопки */
+    border: none; /* Убираем границу кнопки */
+    border-radius: 3px; /* Скругление углов кнопки */
+    font-size: 16px; /* Размер шрифта */
+    cursor: pointer; /* Изменение курсора при наведении на кнопку */
+    transition: background-color 0.3s ease; /* Плавное изменение цвета фона при наведении */
+}
+
+/* Стили для кнопки отправки формы при наведении */
+button[type="submit"]:hover {
+    background-color: #0056b3; /* Темно-синий цвет фона при наведении */
+}

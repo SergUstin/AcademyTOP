@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Экзамен по HTML/CSS</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="header_container">
+    <div class="header_block container">
+      <button class="header_btn_burger"></button>
+      <div class="header_block_left">        
+        <a href="#" class="header_logo">
+          <picture>
+            <source srcset="img/icon/header-logo-768w.svg" media="(max-width: 980px)">
+            <source srcset="img/icon/header-logo-320w.svg" media="(max-width: 520px)">
+            <img src="img/icon/header-logo.svg" alt="Logo">
+          </picture>          
+        </a>
+      </div>
+      <div class="header_block_right">
+        <ul class="header_nav">
+          <li class="header_nav_list">
+            <a href="#" class="hader_nav_list_item">
+              О нас
+            </a>
+          </li>
+          <li class="header_nav_list">
+            <a href="#" class="hader_nav_list_item">
+              Проекты
+            </a>
+          </li>
+          <li class="header_nav_list">
+            <a href="#" class="hader_nav_list_item">
+              Этапы
+            </a>
+          </li>
+          <li class="header_nav_list">
+            <a href="#" class="hader_nav_list_item">
+              Отзывы
+           </a>
+          </li>
+          <li class="header_nav_list">
+            <a href="#" class="hader_nav_list_item">
+              Контакты
+           </a>
+          </li>
+        </ul>
+        <button class="header_btn_search"></button> 
+      </div>
+    </div>   
+  </header>
+  <main class="container">
+    <section class="hero">
+      <h1 class="hero_heading">
+        Проектные решения любой сложности
+      </h1>
+      <p class="hero_description">
+        Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день остаются уделом проектантов
+      </p>
+      <button class="hero_btn">
+        Заказать расчёт               
+      </button>
+    </section>
+
+    <section class="about-us container_768">
+      <h2 class="about-us_heading heading">
+        О нас
+      </h2>
+      <p class="about-us_description">
+        Также как перспективное планирование создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса экспериментов, поражающих по своей масштабности и грандиозности. А также диаграммы связей могут быть описаны максимально подробно. Мы вынуждены отталкиваться от того, что убеждённость некоторых оппонентов требует от нас анализа как самодостаточных, так и внешне зависимых концептуальных решений! Следует отметить, что высококачественный прототип <img src="img/icon/i-aboutus.svg" alt="!" class="about-us_description_icon"> будущего проекта предопределяет высокую востребованность позиций, занимаемых участниками в отношении поставленных задач. Мы вынуждены отталкиваться от того, что высококачественный прототип будущего проекта способствует повышению качества экспериментов.
+      </p>
+      <picture>
+        <source srcset="img/pictures/aboutus-picture.jpg" media="(max-width: 580px)">
+        <source srcset="img/pictures/aboutus-picture-320w.png" media="(max-width: 320px)">
+        <img src="img/pictures/aboutus-picture-320w.png" alt="Картинка" class="about-us_picture">
+      </picture>
+      <div class="about-us-blocks">
+        <article class="about-us_left">        
+          <div class="about-us_left_description">
+            <p class="about-us_left_item">
+              Принимая во внимание показатели успешности, перспективное планирование способствует подготовке и реализации новых принципов.
+            </p>
+            <a href="#" class="about-us_left_link">
+              Подробнее
+            </a>
+          </div>
+        </article>
+        <ul class="about-us_right_list">
+          <li class="about-us_right_list_item about-us_right_list_item1">            
+            <h3 class="about-us_right_list_heading">Консультация с широким активом</h3>
+             А также свежий взгляд на привычные вещи - безусловно открывает новые горизонты для как самодостаточных, так и внешне зависимых концептуальных решений.
+          </li>
+          <li class="about-us_right_list_item about-us_right_list_item2">            
+            <h3 class="about-us_right_list_heading">В своём стремлении повысить</h3>
+            Качество жизни, они забывают, что сплочённость команды профессионалов представляет собой интересный эксперимент проверки прогресса профессионального сообщества.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="how-we-work container_768">
+      <h2 class="how-we-work_left_heading heading">
+        Как мы работаем
+      </h2>
+      <ul class="how-we-work_left_list">
+        <li class="how-we-work_left_list_item">
+          <a href="#" class="how-we-work_left_list_link how-we-work_left_list_link-first">
+            1 шаг
+          </a>
+        </li>
+        <li class="how-we-work_left_list_item">
+          <a href="#" class="how-we-work_left_list_link">
+            2 шаг
+          </a>
+        </li>
+        <li class="how-we-work_left_list_item">
+          <a href="#" class="how-we-work_left_list_link">
+            3 шаг
+          </a>
+        </li>
+        <li class="how-we-work_left_list_item">
+          <a href="#" class="how-we-work_left_list_link">
+            4 шаг
+          </a>
+        </li>
+      </ul>
+      <article class="how-we-work_blocks">
+        <div class="how-we-work_block">
+          <p class="how-we-work_left_description">
+            <span class="how-we-work_left_heading-description">Проводим консультацию</span> <br>Влечет за собой процесс внедрения и модернизации приоритизации разума над эмоциями. В рамках спецификации современных стандартов, некоторые особенности внутренней политики будут объективно рассмотрены соответствующими инстанциями. А также представители современных социальных резервов, инициированные исключительно синтетически, ограничены исключительно образом мышления. Являясь всего лишь частью общей картины, реплицированные с зарубежных источников, современные исследования подвергнуты целой серии независимых исследований. Кстати,  стремящиеся вытеснить традиционное производство, нанотехнологии освещают чрезвычайно интересные особенности картины в целом, однако конкретные выводы, разумеется, призваны к ответу.
+          </p>
+          <a href="#" class="how-we-work_left_left-link">Подробнее</a> 
+          <a href="#" class="how-we-work_left_right-link">Договор</a>                   
+        </div>
+        <img src="img/pictures/howwework-picture.jpg" alt="Картинка" class="how-we-work_right">         
+      </article>
+    </section>
+
+    <section class="faq container_768">
+      <h2 class="faq_heading heading">
+        Часто задаваемые вопросы
+      </h2>
+      <ul class="faq_list">
+        <li class="faq_list_item">
+          <button class="faq_list_btn">
+            <span class="faq_list_btn_description">Из чего формируется конечная стоимость проекта?</span>                                        
+          </button>         
+        </li>
+        <li class="faq_list_item">
+          <button class="faq_list_btn">
+            <span class="faq_list_btn_description">У меня есть свой проект. Сможем ли мы его доработать / реализовать?</span>  
+          </button>                   
+        </li>
+        <li class="faq_list_item">
+          <button class="faq_list_btn">
+            <span class="faq_list_btn_description">Я выбираю между разными компаниями. В чём ваше отличие?</span>           
+            </button>
+        </li>
+        <li class="faq_list_item">
+          <button class="faq_list_btn">
+            <span class="faq_list_btn_description">Могу ли я делегировать вам работу / согласование с подрядчиком / организацией?</span>           
+           </button>
+        </li>
+        <li class="faq_list_item">
+          <button class="faq_list_btn">
+            <span class="faq_list_btn_description">Могу ли я вернуть деньги на каком-либо из этапов работ?</span>           
+          </button>
+        </li>        
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer-container">
+    <div class="footer_block container">
+      <div class="footer-left">
+        <img src="img/icon/footer-logo.svg" alt="Logo" class="footer-left_logo">
+        <nav class="footer-left_nav">
+          <ul class="footer-left_nav_list">
+            <li class="footer-left_nav_list_item">
+              <a href="#" class="footer-left_nav_list_link">
+                О нас
+              </a>            
+            </li>
+            <li class="footer-left_nav_list_item">
+              <a href="#" class="footer-left_nav_list_link">
+                Проекты
+              </a>            
+            </li>
+            <li class="footer-left_nav_list_item">
+              <a href="#" class="footer-left_nav_list_link">
+                Отзывы
+              </a>            
+            </li>
+            <li class="footer-left_nav_list_item">
+              <a href="#" class="footer-left_nav_list_link">
+                Договор оферты
+              </a>            
+            </li>
+            <li class="footer-left_nav_list_item">
+              <a href="#" class="footer-left_nav_list_link">
+                Договор подряда
+              </a>            
+            </li>
+            <li class="footer-left_nav_list_item">
+              <a href="#" class="footer-left_nav_list_link">
+                Конфиденциальность
+              </a>            
+            </li>
+            <li class="footer-left_nav_list_item">
+              <a href="#" class="footer-left_nav_list_link">
+                Партнёрское соглашение
+              </a>            
+            </li>
+          </ul>
+        </nav>
+        <ul class="footer-left_social">
+          <li class="footer-left_social_Item">
+            <a href="#" class="footer-left_social_link footer-left_social_fb"></a>
+          </li>
+          <li class="footer-left_social_Item">
+            <a href="#" class="footer-left_social_link footer-left_social_vk"></a>
+          </li>
+          <li class="footer-left_social_Item">
+            <a href="#" class="footer-left_social_link footer-left_social_insta"></a>
+          </li>
+        </ul>
+      </div>
+      <form action="https://jsonplaceholder.typicode.com/posts" autocomplete method="POST" target="_blanc" class="footer_form">
+        <h2 class="footer_form_heading heading">
+          Оставить заявку
+        </h2>
+        <input required type="text" name="Имя" placeholder="Фамилия, имя и отчество*" class="footer_form_imput">
+        <input required type="email" name="Почта" placeholder="E-mail*" class="footer_form_imput">  
+        <textarea name="Сообщение" cols="30" rows="10" placeholder="Сообщение" class="footer_form_massage"></textarea>
+        <div class="footer_form_send">
+          <button class="footer_form_btn">
+            Отправить данные
+          </button>
+          <input required id="check" type="checkbox" name="Галочка" class="sr-only">
+          <label for="check" class="footer_form_label"><span class="footer_form_check_description">Согласен на обработку данных</span></label>
+        </div>        
+      </form>
+      <p class="footer-right">
+        Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: разбавленное изрядной долей эмпатии, рациональное мышление позволяет оценить значение модели развития. Таким образом, консультация с широким активом обеспечивает широкому кругу (специалистов) участие в формировании стандартных подходов. 
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>

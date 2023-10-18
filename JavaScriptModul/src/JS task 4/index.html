@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        
+        background-color: aqua;
+    }
+</style>
+<body>
+    <!-- Задание номер 1 -->
+    <h3>Первое задание</h3>
+    <button onclick="changeColor()">Нажмите для изминения цвета</button>
+
+    <!-- Задание номер 2 -->
+    <h3>Второе задание</h3>
+    <input id="num1" />
+
+    <div id="operator_btns">
+      <button id="plus" class="operator" onclick="op='+'">+</button>
+      <button id="minus" class="operator" onclick="op='-'">-</button>
+      <button id="times" class="operator" onclick="op='*'">x</button>
+      <button id="divide" class="operator" onclick="op='/'">:</button>
+    </div>
+
+    <input id="num2" />
+
+    <button onclick="func()">равняется...</button>
+
+    <p id="result"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>

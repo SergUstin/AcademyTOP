@@ -1,0 +1,123 @@
+@media (max-width: 900px) {
+    .header__container {
+        height: 69px;
+    }
+
+    .hero {
+        height: 663px;
+    }
+
+    .swiper-slide {
+        padding-top: 163px;
+        padding-left: 40px;
+    }
+
+    .hero-content__heading {
+        font-size: 50px;
+        line-height: 60px;
+    }
+    
+    .hero-content__text {
+        font-size: 18px;
+        max-width: 540px;
+        margin-bottom: 55px;
+    }
+
+    .nav {
+        height: 731px;
+    }
+
+    .about__text {
+        max-width: 607px;
+    }
+
+    .about-content__left {
+        min-height: 648px;
+    }
+
+    .about-left__text {
+        margin: 0;
+        max-width: 366px;
+    }
+
+    .about-left__inner {
+        padding: 35px 39px 33px 41px;
+    }
+
+    .about-right__item {
+        padding: 37px 43px 34px 298px;
+        padding-left: 170px;
+        background-size: 114px 99px;
+        background-position: left 39px top 68px;
+    }
+
+    .about-right__item:first-child {
+        background-position: left 39px top 67px;
+    }
+
+    .work__list {
+        margin-bottom: 42px;
+        justify-content: space-between;
+    }
+
+    .work__content {
+       flex-direction: column-reverse;
+    }
+
+    .work-right,
+    .work-left {
+        width: 100%;
+    }
+
+    .work-left__text {
+        max-width: 100%;
+    }
+
+    .work-right {
+        margin-bottom: 40px;
+    }
+
+    .questions {
+        padding-top: 42px;
+        padding-bottom: 79px;
+    }
+
+    .questions__wrapper {
+        padding: 45px 0 35px;
+    }
+
+    .questions__title {
+        max-width: 520px;
+        margin-right: 100px;
+    }
+
+    .questions__heading {
+        margin-bottom: 28px;
+        font-size: 52px;
+    }
+
+    .footer {
+        padding-top: 45px;
+    }
+
+    .footer__container {
+        flex-direction: column-reverse;
+    }
+
+    .footer-right {
+        width: 81%;
+        margin-bottom: 42px;
+    }
+
+    .footer__list {
+        display: none;
+    }
+    
+    .footer__logo {
+        margin-bottom: 12px;
+    }
+
+    .footer__icon {
+        flex-shrink: 0;
+    }
+}

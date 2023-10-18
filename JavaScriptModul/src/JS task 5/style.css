@@ -1,0 +1,27 @@
+body {
+    margin: 25px 25px;
+    padding: 0 auto;
+    background-color: bisque;
+}
+
+h2 {
+    margin: 20px 0;
+    padding: 0;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 500px;
+    height: 140px;
+}
+
+.left {
+    max-width: 200px;
+}
+
+.right {
+    max-width: 200px;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS task 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+</style>
+<body>
+    <div class="container">
+        <!-- Задание номер 1 -->
+        <section>
+            <h3>First task</h3>
+            <p>Enter your name(name can't contain digits):</p>
+            <input type="text" onkeypress="noDigits(event)" placeholder="Enter your name here">
+        </section>
+    
+        <!-- Задание номер 2 -->
+        <section>
+            <h3>Second task</h3>
+            <button id="button">Open modal</button>
+            <div id="myModal" class="modal">
+                <div id="modal-content">
+                    <p class="modal-discription">Hello from Modal Window!</p>
+                    <button id="modal_btn">Close</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Задание номер 3 -->
+        <section>
+            <h3>Third task</h3>
+            <div id="field">
+            <img src="https://ru.js.cx/clipart/ball.svg" id="ball"> . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+          </div>    
+        </section>
+
+        <!-- Задание номер 4 -->
+        <section>
+            <h3>Fourth task</h3>
+            <div class="scene">
+                <div class="traffic__lights">
+                  <span id="red" class="traffic__light traffic__red"></span>
+                  <span id="yellow" class="traffic__light"></span>
+                  <span id="green" class="traffic__light"></span>
+                </div>
+                <button id="btn" class="traffic__btn">Next</button>
+            </div>
+        </section>
+
+        <!-- Задание номер 5 -->
+        <section>            
+            <h3>Fifth task</h3>
+            <ul class="bookList">
+                <ol>1. JavaScript: The Good Parts («JavaScript. Сильные стороны»)</ol>
+                <ol>2. You Don't Know JS («Вы не знаете JS»)</ol>
+                <ol>3. Eloquent JavaScript: A Modern Introduction to Programming («Выразительный Javascript»)</ol>
+                <ol>4. Effective JavaScript: 68 Specific Ways to Harness the Power of JavaScript («Сила JavaScript. 68 способов эффективного использования JS»)</ol>
+                <ol>5. JavaScript: The Definitive Guide («JavaScript. Подробное руководство»)</ol>
+                <ol>6. Secrets of the JavaScript Ninja («Секреты JavaScript ниндзя»)</ol>
+                <ol>7. JavaScript Patterns: Build Better Applications with Coding and Design Patterns («JavaScript. Шаблоны»)</ol>
+                <ol>8. The Principles of Object-Oriented JavaScript («Принципы ООП в Javascript»)</ol>
+                <ol>9. Programming JavaScript Applications: Robust Web Architecture with Node, HTML5, and Moderns JS Libraries («Программирование приложений на JavaScript. Устойчивая веб-архитектура с помощью Node, HTML5 и современных JS-библиотек»)</ol>
+                <ol>10. Beginning JavaScript («JavaScript. Основы»)</ol>
+            </ul>
+        </section>
+
+        <!-- Задание номер 6 -->
+        <section>
+            <h3>Fifth task</h3>
+            <button data-tooltip="Tool tip1">Button1</button>
+            <button data-tooltip="Tool tip2">Button2</button>
+        </section>       
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

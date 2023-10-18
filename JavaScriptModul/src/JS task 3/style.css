@@ -1,0 +1,171 @@
+body {    
+    background-color: bisque;
+}
+
+h3 {
+    margin: 10px 0;
+}
+
+p {
+    margin: 0 0;
+    padding: 0 0;
+}
+
+section {
+    margin-bottom: 20px;
+}
+input {
+    margin-top: 5px;
+}
+
+ul {
+    margin: 0 0;
+    padding: 0 0;
+}
+
+ol {
+    margin: 5px 5px;
+    padding: 0 0;
+}
+
+.container{
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 75px;
+    padding-right: 75px; 
+ }
+
+/* Стили задания номер 2 */
+
+/* Модальный (фон) */
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed; /* Оставаться на месте */
+    z-index: 1; /* Сидеть на вершине */
+    left: 11px;
+    top: 84px;
+    width: 20%; /* Полная ширина */
+    height: 20%; /* Полная высота */
+    overflow: auto; /* Включите прокрутку, если это необходимо */
+    background-color: #4cc1d6; /* Цвет запасной вариант */
+    background-color: #4cc1d6; /* Черный с непрозрачностью */
+  }
+  
+  /* Модальное содержание/коробка */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% сверху и по центру */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Может быть больше или меньше, в зависимости от размера экрана */
+  }
+  
+  /* Кнопка закрытия */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .modal-discription {
+    padding: 0 23%;
+  }
+
+  #modal_btn {
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 11%;
+  }
+
+  /* Стили задания номер 3 */
+  
+  #field {
+    width: 200px;
+    height: 150px;
+    border: 10px solid black;
+    background-color: #00FF00;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  #ball {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    transition: all 1s;
+  }
+
+  /* Стили задания номер 4 */
+  .scene {
+    display: flex;
+  }
+
+  .traffic__lights {
+    width: 200px;
+    height: 60px;
+    padding-bottom: 0;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 3px solid grey;
+    border-radius: 15px;
+  }
+  .traffic__light {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: 2px solid lightgrey;
+    background-color: grey;
+  }
+  .traffic__off {
+    background-color: #555;
+  }
+  .traffic__red {
+    background-color: red;
+  }
+  .traffic__green {
+    background-color: green;
+  }
+  .traffic__yellow {
+    background-color: yellow;
+  }
+  .traffic__btn {
+    padding: 24px;
+    margin-left: 10px;
+    border-radius: 15px;
+  }
+
+ /* Стили задания номер 4 */
+ .bookList ol {
+    cursor: pointer;
+  }
+   
+  .selected {
+    color: red;
+  }
+
+  /* Стили задания номер 4 */    
+  .tooltip {
+    position: fixed;
+    padding: 10px 20px;
+    border: 1px solid #b3c9ce;
+    border-radius: 4px;
+    text-align: center;
+    font: italic 14px/1.3 sans-serif;
+    color: white;
+    background: purple;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .3);
+}
