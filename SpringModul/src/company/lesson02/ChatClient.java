@@ -1,48 +1,70 @@
 package company.lesson02;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
+import java.io.*;
 import java.net.Socket;
+import java.util.Scanner;
 
 public class ChatClient {
-    public static void main(String[] args) {
-        Socket socket;
 
-        {
-            try {
-                socket = new Socket("localhost", 12345);
+    private final BufferedReader scannerLogin;
+    private BufferedReader fromServer;
+    private PrintWriter toServer;
 
-                BufferedReader reader = new BufferedReader((new InputStreamReader(socket.getInputStream())));
+    public ChatClient() {
+        scannerLogin = new BufferedReader(new InputStreamReader(System.in));
+    }
 
-                PrintWriter writer = new PrintWriter(socket.getOutputStream(), true);
+    private void run() throws IOException {
+        boolean chatWorks = true;
+        while (chatWorks) {
+            try (Socket socket = new Socket("localhost", 12345)) {
 
-                Thread readerThread = new Thread(() -> {
-                    try {
-                        String message = "";
-                        while ((message = reader.readLine()) != null) {
-                            System.out.println("Сервер: " + message);
+                fromServer = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+                toServer= new PrintWriter(socket.getOutputStream(), true);
 
+                new Thread(() -> {
+                    boolean userWantsToChat = true;
+                    Scanner scanner = new Scanner(System.in);
+                    while (userWantsToChat) {
+                        String lineFromChat = scanner.nextLine();
+                        if ("q".equals(lineFromChat)) {
+                            userWantsToChat = false;
                         }
-                    } catch (IOException e) {
-                        e.printStackTrace();
+                        toServer.println(lineFromChat);
                     }
-                });
-                readerThread.start();
+                }).start();
 
-                BufferedReader consoleReader = new BufferedReader(new InputStreamReader(System.in));
-
-                String userInput;
-
-                while ((userInput = consoleReader.readLine()) != null) {
-                    writer.println(userInput);
+                while (true) {
+                    String line = fromServer.readLine();
+                    if (line.startsWith(ChatServer.MENU_CODE)) {
+                        System.out.println(line.replace(ChatServer.MENU_CODE, ""));
+                    } else if (line.startsWith(ChatServer.START_CHAT_CODE)) {
+                        System.out.println(line.replace(ChatServer.START_CHAT_CODE, ""));
+                    } else if (line.startsWith(ChatServer.MSG_CODE)) {
+                        System.out.println(line.replace(ChatServer.MSG_CODE, ""));
+                    }
                 }
-            } catch (IOException e) {
-                throw new RuntimeException(e);
+            } catch (IOException ignore) {
+                System.out.println("Нет соединения с сервером.\n Хотите продолжить или нажмете на выход?\n Нажмите 1 - продолжить или q для выхода");
+                boolean userAnswered = handleUserAnswer(scannerLogin.readLine());
+                if (!userAnswered) {
+                    chatWorks = false;
+                }
             }
         }
+    }
 
+    private boolean handleUserAnswer(String userAnswer) {
+        if ("q".equals(userAnswer)) {
+            System.out.println("До свидания!");
+            return false;
+        }
+        return true;
+    }
+
+    public static void main(String[] args) throws IOException {
+        ChatClient chatClient = new ChatClient();
+        chatClient.run();
     }
 
 }
