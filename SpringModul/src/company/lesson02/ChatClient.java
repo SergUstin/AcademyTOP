@@ -1,70 +1,107 @@
 package company.lesson02;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.net.Socket;
-import java.util.Scanner;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class ChatClient {
 
-    private final BufferedReader scannerLogin;
-    private BufferedReader fromServer;
-    private PrintWriter toServer;
+    private static final ConcurrentHashMap<String, String> users = new ConcurrentHashMap<>();
 
-    public ChatClient() {
-        scannerLogin = new BufferedReader(new InputStreamReader(System.in));
+    public static void main(String[] args) {
+        try {
+            // Устанавливаем соединение с сервером, который слушает на порту 12345
+            Socket socket = new Socket("localhost", 12345);
+
+            // Создаем читателя для входящих сообщений от сервера
+            BufferedReader reader = new BufferedReader(
+                    new InputStreamReader(socket.getInputStream()));
+
+            // Создаем писателя для отправки сообщений серверу
+            PrintWriter writer = new PrintWriter(socket.getOutputStream(), true);
+
+            // Поток для чтения сообщений от сервера
+            Thread readerThread = new Thread(() -> {
+                try {
+                    String message;
+                    // Бесконечный цикл для чтения сообщений от сервера
+                    while ((message = reader.readLine()) != null) {
+                        System.out.println("Сервер: " + message);
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            });
+            readerThread.start();
+
+            // Чтение сообщений с консоли и отправка на сервер
+            BufferedReader consoleReader = new BufferedReader(
+                    new InputStreamReader(System.in));
+
+            // Бесконечный цикл работы приложения
+            while (true) {
+                // Небольшое меню
+                System.out.println("Для регистрации - нажмите 1, для входа - нажмите 2");
+
+                // Авторизация или регистрация клиента
+                String menu = consoleReader.readLine();
+                switch (menu) {
+                    case "1" -> Handler.register();
+                    case "2" -> Handler.start();
+                }
+                System.out.println("Добро пожаловать " + Handler.userName + " для выхода - нажмите q");
+                // Бесконечный цикл для чтения сообщений с консоли и отправки на сервер
+                boolean chatState = true;
+                while (chatState) {
+                    String userInput = consoleReader.readLine();
+                    if (!"q".equals(userInput)) {
+                        writer.println(userInput);
+                    } else {
+                        chatState = false;
+                    }
+                }
+
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
-    private void run() throws IOException {
-        boolean chatWorks = true;
-        while (chatWorks) {
-            try (Socket socket = new Socket("localhost", 12345)) {
+    public static class Handler {
+        private static final BufferedReader consoleReader = new BufferedReader(new InputStreamReader(System.in));
+        private static String userName;
+        private static String password;
 
-                fromServer = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-                toServer= new PrintWriter(socket.getOutputStream(), true);
+        public static void register() throws IOException {
+            System.out.println("Создайте имя пользователя");
+            userName = consoleReader.readLine();
+            if (!users.containsKey(userName)) {
+                System.out.println("Создайте пароль");
+                password = consoleReader.readLine();
+                users.put(userName, password);
+            } else {
+                System.out.println("Пользователь с таким именем существует!");
+                start();
+            }
+        }
 
-                new Thread(() -> {
-                    boolean userWantsToChat = true;
-                    Scanner scanner = new Scanner(System.in);
-                    while (userWantsToChat) {
-                        String lineFromChat = scanner.nextLine();
-                        if ("q".equals(lineFromChat)) {
-                            userWantsToChat = false;
-                        }
-                        toServer.println(lineFromChat);
-                    }
-                }).start();
-
-                while (true) {
-                    String line = fromServer.readLine();
-                    if (line.startsWith(ChatServer.MENU_CODE)) {
-                        System.out.println(line.replace(ChatServer.MENU_CODE, ""));
-                    } else if (line.startsWith(ChatServer.START_CHAT_CODE)) {
-                        System.out.println(line.replace(ChatServer.START_CHAT_CODE, ""));
-                    } else if (line.startsWith(ChatServer.MSG_CODE)) {
-                        System.out.println(line.replace(ChatServer.MSG_CODE, ""));
-                    }
+        public static void start() throws IOException {
+            System.out.println("Введите имя зарегистрированного пользователя");
+            userName = consoleReader.readLine();
+            if (users.containsKey(userName)) {
+                System.out.println("Введите пароль");
+                password = consoleReader.readLine();
+                if (!users.get(userName).contains(password)) {
+                    System.out.println("Введен не корректный пароль");
+                    start();
                 }
-            } catch (IOException ignore) {
-                System.out.println("Нет соединения с сервером.\n Хотите продолжить или нажмете на выход?\n Нажмите 1 - продолжить или q для выхода");
-                boolean userAnswered = handleUserAnswer(scannerLogin.readLine());
-                if (!userAnswered) {
-                    chatWorks = false;
-                }
+            } else {
+                System.out.println("Пользователя с таким именем не существует");
+                register();
             }
         }
     }
-
-    private boolean handleUserAnswer(String userAnswer) {
-        if ("q".equals(userAnswer)) {
-            System.out.println("До свидания!");
-            return false;
-        }
-        return true;
-    }
-
-    public static void main(String[] args) throws IOException {
-        ChatClient chatClient = new ChatClient();
-        chatClient.run();
-    }
-
 }
