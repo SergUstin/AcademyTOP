@@ -1,4 +1,4 @@
-package company.lesson02.server;
+package company.Chat.server;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package company.lesson03.UDP;
+package company.UDP;
 
 import java.io.IOException;
 import java.net.DatagramPacket;

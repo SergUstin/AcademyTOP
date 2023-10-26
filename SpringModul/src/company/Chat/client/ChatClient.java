@@ -1,4 +1,4 @@
-package company.lesson02.client;
+package company.Chat.client;
 
 import java.io.BufferedReader;
 import java.io.IOException;
