@@ -1,4 +1,4 @@
-package org.example.server;
+package company.lesson02.server;
 
 import java.util.ArrayList;
 import java.util.List;

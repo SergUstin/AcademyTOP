@@ -1,4 +1,4 @@
-package org.example.client;
+package company.lesson02.client;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,6 +7,8 @@ import java.io.PrintWriter;
 import java.net.Socket;
 
 public class ChatClient {
+    private static boolean authenticated = false;
+
     public static void main(String[] args) {
         try {
             // Устанавливаем соединение с сервером, который слушает на порту 12345
@@ -23,9 +25,16 @@ public class ChatClient {
             Thread readerThread = new Thread(() -> {
                 try {
                     String message;
-                    // Бесконечный цикл для чтения сообщений от сервера
                     while ((message = reader.readLine()) != null) {
-                        System.out.println("Сервер: " + message);
+                        if ("AUTHENTICATION SUCCESSFUL".equals(message)) {
+                            System.out.println("Аутентификация успешна. Теперь вы можете отправлять сообщения.");
+                            authenticated = true;
+                        } else if ("AUTHENTICATION FAILED".equals(message)) {
+                            System.out.println("Аутентификация не удалась. Завершение приложения.");
+                            System.exit(1); // Завершаем приложение
+                        } else {
+                            System.out.println("Сервер: " + message);
+                        }
                     }
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -52,13 +61,16 @@ public class ChatClient {
                 try {
                     String userInput;
                     while ((userInput = consoleReader.readLine()) != null) {
-                        writer.println(userInput);
+                        if (authenticated) {
+                            writer.println(userInput);
+                        } else {
+                            System.out.println("Аутентификация не выполнена. Невозможно отправить сообщение.");
+                        }
                     }
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
             });
-
             writerThread.start();
 
         } catch (IOException e) {

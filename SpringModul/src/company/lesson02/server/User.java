@@ -1,4 +1,4 @@
-package org.example.server;
+package company.lesson02.server;
 
 public class User {
     private String username;

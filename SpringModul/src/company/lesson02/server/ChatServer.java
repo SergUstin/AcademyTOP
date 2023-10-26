@@ -1,4 +1,4 @@
-package org.example.server;
+package company.lesson02.server;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -41,16 +41,17 @@ public class ChatServer {
 
                         if (userDatabase.authenticateUser(username, password)) {
                             System.out.println("Пользователь аутентифицирован: " + username);
+                            writer.println("AUTHENTICATION SUCCESSFUL"); // Уведомление об успешной аутентификации
                             String message;
                             while ((message = reader.readLine()) != null) {
-                                System.out.println("Получено от клинта: " + message);
+                                System.out.println("Получено от клиента: " + message);
                                 broadcastMessage(message);
                             }
                         } else {
                             System.out.println("Аутентификация не удалась. Закрытие соединения.");
+                            writer.println("AUTHENTICATION FAILED"); // Уведомление о неудачной аутентификации
                             clientSocket.close();
                         }
-
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
