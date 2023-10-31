@@ -1,4 +1,4 @@
-package company.JDBCExp;
+package company.JDBCOne;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
