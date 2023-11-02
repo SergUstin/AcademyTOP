@@ -18,11 +18,18 @@ public class Main {
 
     public static void main(String[] args) {
         try {
+
+            System.out.println("Вывод данных меньше 30");
             getSampleByTheHour();
+            System.out.println("\n");
+
             addNewCourse("Scrum", 20, "MANAGEMENT",
                     "Представляем вашему вниманию шикарный курс Scrum", 150, 20000);
+
             changeThePriceOfTheCourseType(6000, "PROGRAMMING");
-//            deletingACourseByItsDuration(10);
+
+            deletingACourseByItsDuration(10);
+
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -103,8 +110,6 @@ public class Main {
             } else {
                 System.out.println("Произошла ошибка");
             }
-
-
 
         } catch (SQLException e) {
             e.printStackTrace();
