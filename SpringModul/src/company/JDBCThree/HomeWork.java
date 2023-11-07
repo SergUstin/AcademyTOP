@@ -29,10 +29,10 @@ public class HomeWork {
             ResultSet resultSet = preparedStatement.executeQuery();
 
             // Хранит список курсов с количеством студентов
-            Map<String, Integer> map = new HashMap<>();
+            Map<String, Integer> listOfCoursesWithNumberOfStudents = new HashMap<>();
 
             // Хранит список курсов с суммой возрастов студентов
-            Map<String, Integer> map1 = new HashMap<>();
+            Map<String, Integer> listOfCoursesWithSumOfAgesStudents = new HashMap<>();
 
             // Счетчик курсов для проверки
             int counter = 1;
@@ -46,9 +46,9 @@ public class HomeWork {
                 // Фильтруем только те курсы у которых тип "DESIGN"
                 if (type.equals("DESIGN")) {
                     // Заполняем названием курсов и количеством студентов
-                    map.put(courseName, map.getOrDefault(courseName, 0) + 1);
+                    listOfCoursesWithNumberOfStudents.put(courseName, listOfCoursesWithNumberOfStudents.getOrDefault(courseName, 0) + 1);
                     // Заполняем названием курсов и суммой возрастов студентов
-                    map1.put(courseName, map1.getOrDefault(courseName, 0) + age);
+                    listOfCoursesWithSumOfAgesStudents.put(courseName, listOfCoursesWithSumOfAgesStudents.getOrDefault(courseName, 0) + age);
                 }
             }
 
@@ -56,11 +56,11 @@ public class HomeWork {
             Map<String, Integer> result = new HashMap<>();
 
             // Заполняем result правильными данными
-            for (String string : map.keySet()) {
+            for (String string : listOfCoursesWithNumberOfStudents.keySet()) {
                 // Получаем общее количество возрастов по каждому курсу
-                int totalAge = map.get(string);
+                int totalAge = listOfCoursesWithNumberOfStudents.get(string);
                 // Получаем сумму возрастов по каждому курсу
-                int sum = map1.get(string);
+                int sum = listOfCoursesWithSumOfAgesStudents.get(string);
 
                 // Получаем среднее значение
                 double averageAge = (double) sum/ totalAge;
