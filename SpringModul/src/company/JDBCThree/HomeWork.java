@@ -3,7 +3,6 @@ package company.JDBCThree;
 import java.sql.*;
 import java.util.*;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 public class HomeWork {
     static String url = "jdbc:mysql://localhost:3306/top";
