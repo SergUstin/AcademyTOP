@@ -13,23 +13,23 @@ public class HomeWork {
 
     public static void main(String[] args) {
         System.out.println("Вывод информации о курсах");
-        informationAboutCourses();
+        informationAboutCourses(); // работает!
         System.out.println();
 
         System.out.println("Добавление нового курса");
-        addNewCourses("Scrum", 100);
+        addNewCourses("Scrum", 100); // не работает!
         System.out.println();
 
         System.out.println("Обновление продолжительности курса");
-        updateDurationCourses(10, "Scrum");
+        updateDurationCourses(10, "Scrum"); // не работает!
         System.out.println();
 
         System.out.println("Вывод информации о студентах");
-        getInformationAboutStudent("Мобильный разработчик с нуля");
+        getInformationAboutStudent("Мобильный разработчик с нуля"); // работает!
         System.out.println();
 
         System.out.println("Добавление нового студента");
-        addNewStudent("Устин Сергей", 31, "Java-разработчик");
+        addNewStudent("Устин Сергей", 31, "Java-разработчик"); // не работает!
 
 
 
@@ -87,7 +87,7 @@ public class HomeWork {
             System.out.println("Данные успешно изменены в БД!");
 
             // Закрываем ресурсы
-            connection.close();
+//            connection.close();
             rowSet.close();
 
         } catch (SQLException e) {
