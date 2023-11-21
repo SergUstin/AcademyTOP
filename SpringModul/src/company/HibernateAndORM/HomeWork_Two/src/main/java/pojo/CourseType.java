@@ -1,4 +1,4 @@
-package company.JDBCFinishedAndStartORM.HomeWork_Two.src.main.java.pojo;
+package company.HibernateAndORM.HomeWork_Two.src.main.java.pojo;
 
 public enum CourseType {
     DESIGN,

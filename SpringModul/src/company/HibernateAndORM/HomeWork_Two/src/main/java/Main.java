@@ -1,4 +1,4 @@
-package company.JDBCFinishedAndStartORM.HomeWork_Two.src.main.java;
+package company.HibernateAndORM.HomeWork_Two.src.main.java;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

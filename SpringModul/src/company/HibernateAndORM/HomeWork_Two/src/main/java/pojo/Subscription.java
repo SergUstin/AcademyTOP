@@ -1,9 +1,8 @@
-package company.JDBCFinishedAndStartORM.HomeWork_Two.src.main.java.pojo;
+package company.HibernateAndORM.HomeWork_Two.src.main.java.pojo;
 
 import jakarta.persistence.*;
 
 import java.util.Date;
-import java.util.List;
 
 @Entity
 @Table(name = "subscriptions")

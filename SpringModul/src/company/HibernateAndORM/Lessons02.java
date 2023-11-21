@@ -1,4 +1,4 @@
-package company.JDBCFinishedAndStartORM;
+package company.HibernateAndORM;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
