@@ -1,5 +1,6 @@
-package pojo;
+package company.JDBCFinishedAndStartORM.HomeWork_One.src.main.java.pojo;
 
+import company.JDBCFinishedAndStartORM.CourseType;
 import jakarta.persistence.*;
 
 @Entity
