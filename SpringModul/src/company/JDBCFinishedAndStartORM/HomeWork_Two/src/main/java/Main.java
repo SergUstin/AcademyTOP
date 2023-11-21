@@ -1,3 +1,5 @@
+package company.JDBCFinishedAndStartORM.HomeWork_Two.src.main.java;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.Metadata;

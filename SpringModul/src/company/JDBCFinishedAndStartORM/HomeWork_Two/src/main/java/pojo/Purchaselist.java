@@ -1,4 +1,4 @@
-package pojo;
+package company.JDBCFinishedAndStartORM.HomeWork_Two.src.main.java.pojo;
 
 import jakarta.persistence.*;
 
