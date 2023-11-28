@@ -7,7 +7,7 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
 import java.util.List;
 
-public class Main {
+public class Main1 {
 
     public static void main(String[] args) {
         getInformationFromCourse();
