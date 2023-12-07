@@ -1,4 +1,4 @@
-package com.company;
+package company.Spring.Spring_02.src.main.java.com.company;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
