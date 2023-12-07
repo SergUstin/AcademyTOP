@@ -1,6 +1,6 @@
 package company.HibernateAndORM.HomeWork_Six.src.main.java;
 
-import factory.*;
+import company.HibernateAndORM.HomeWork_Six.src.main.java.factory.*;
 import org.hibernate.Session;
 
 public class FactoryMain {
