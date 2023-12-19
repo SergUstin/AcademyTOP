@@ -1,11 +1,11 @@
 package company.HibernateAndORM.HW_Hiber_Five.src.main.java.strategy;
 
+import company.HibernateAndORM.HW_Hiber_Five.src.main.java.models.Course;
+import company.HibernateAndORM.HW_Hiber_Five.src.main.java.models.Teacher;
 import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.persistence.criteria.CriteriaQuery;
 import jakarta.persistence.criteria.Join;
 import jakarta.persistence.criteria.Root;
-import models.Course;
-import models.Teacher;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
