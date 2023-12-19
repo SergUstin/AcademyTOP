@@ -37,7 +37,6 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
             <version>6.0.13</version>
-            <scope>Spring</scope>
         </dependency>
     </dependencies>
 
