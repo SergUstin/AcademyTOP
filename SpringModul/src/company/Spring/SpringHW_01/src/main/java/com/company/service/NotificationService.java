@@ -11,11 +11,13 @@ public class NotificationService {
 
     private final PushNotificationService pushNotificationService;
 
-    @Qualifier
     private final SMSService smsService;
 
     @Autowired
-    public NotificationService(EmailService emailService, PushNotificationService pushNotificationService, SMSService smsService) {
+    public NotificationService(
+            @Qualifier("emailService") EmailService emailService,
+            @Qualifier("pushNotificationService") PushNotificationService pushNotificationService,
+            @Qualifier("smsService") SMSService smsService) {
         this.emailService = emailService;
         this.pushNotificationService = pushNotificationService;
         this.smsService = smsService;

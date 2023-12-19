@@ -1,9 +1,9 @@
 package company.HibernateAndORM.HW_Hiber_Five.src.main.java;
 
+import company.HibernateAndORM.HW_Hiber_Five.src.main.java.strategy.*;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import strategy.*;
 
 public class Main extends SessionFactoryBuilder {
     public static void main(String[] args) {
