@@ -1,0 +1,7 @@
+app:
+  bean:
+    name: ApplicationContextAwareService
+  service:
+    name: "Service"
+  user:
+    name: "Serg"
