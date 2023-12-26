@@ -1,0 +1,2 @@
+Serg; +7(999) 999-99-99; serg@example.com
+Oleg; +7(999) 999-99-97; oleg@example.com
