@@ -1,4 +1,4 @@
-package com.company.config;
+package company.Spring.Spring_05.src.main.java.com.company.config;
 
 import com.company.service.impl.InMemoryContactRepositoryImpl;
 import com.company.service.repository.ContactRepository;

@@ -1,4 +1,4 @@
-package com.company;
+package company.Spring.Spring_05.src.main.java.com.company;
 
 import com.company.config.AppConfig;
 import com.company.service.ContactService;
