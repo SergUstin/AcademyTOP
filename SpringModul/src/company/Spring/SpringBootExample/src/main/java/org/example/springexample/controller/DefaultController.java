@@ -1,4 +1,4 @@
-package org.example.springexample.controller;
+package company.Spring.SpringBootExample.src.main.java.org.example.springexample.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
