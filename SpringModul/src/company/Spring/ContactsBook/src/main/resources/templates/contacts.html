@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact List</title>
+        <style>
+            .container {
+                width: 80%; /* Ширина контейнера */
+                margin: 0 auto; /* Авто-марджин для центрирования */
+                text-align: center; /* Центрирование содержимого */
+            }
+            table {
+                border-collapse: collapse;
+                width: 100%; /* Ширина таблицы */
+            }
+            th, td {
+                border: 1px solid black;
+                padding: 8px;
+                text-align: left;
+            }
+            tr:nth-child(even) {
+                background-color: #f2f2f2; /* Цвет фона для четных строк */
+            }
+            tr:nth-child(odd) {
+                background-color: #ffffff; /* Цвет фона для нечетных строк */
+            }
+            .create-contact-button {
+                margin-top: 20px;
+                text-decoration: none;
+                color: black;
+                display: block; /* Превращаем ссылку в блочный элемент */
+                width: 200px; /* Задаем фиксированную ширину */
+                text-align: left; /* Выравниваем текст по левому краю */
+                font-size: 20px;
+            }
+        </style>
+    </head>
+
+    <body>
+    <div class="container">
+        <h1>Contact List</h1>
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            <tr th:each="contact : ${contacts}">
+                <td th:text="${contact.id}"></td>
+                <td th:text="${contact.firstName}"></td>
+                <td th:text="${contact.lastName}"></td>
+                <td th:text="${contact.email}"></td>
+                <td th:text="${contact.phone}"></td>
+                <td><a th:href="@{/contacts/edit/{id}(id=${contact.id})}">Edit</a></td>
+                <td><a th:href="@{/contacts/delete/{id}(id=${contact.id})}">Delete</a></td>
+            </tr>
+        </table>
+
+        <br>
+        <a class="create-contact-button" href="/contacts/create">Create New Contact</a>
+    </div>
+
+    </body>
+</html>

@@ -1,0 +1,36 @@
+11:34:05.935 [main] INFO  c.c.c.ContactsBookApplication - Starting ContactsBookApplication using Java 17.0.9 with PID 17280 (C:\Users\Serg\ContactsBook\target\classes started by Serg in C:\Users\Serg\ContactsBook)
+11:34:05.937 [main] DEBUG c.c.c.ContactsBookApplication - Running with Spring Boot v3.2.1, Spring v6.1.2
+11:34:05.937 [main] INFO  c.c.c.ContactsBookApplication - No active profile set, falling back to 1 default profile: "default"
+11:34:06.326 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+11:34:06.361 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 29 ms. Found 1 JPA repository interface.
+11:34:06.685 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+11:34:06.693 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+11:34:06.694 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]
+11:34:06.733 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+11:34:06.733 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 763 ms
+11:34:06.827 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+11:34:06.865 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+11:34:06.888 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+11:34:07.048 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+11:34:07.069 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+11:34:07.281 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@359865a2
+11:34:07.283 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+11:34:07.872 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+11:34:08.133 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+11:34:08.294 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+11:34:08.537 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
+11:34:08.543 [main] INFO  c.c.c.ContactsBookApplication - Started ContactsBookApplication in 2.957 seconds (process running for 3.428)
+11:34:08.545 [main] INFO  c.c.c.ContactsBookApplication - Application started
+11:34:23.609 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+11:34:23.609 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+11:34:23.610 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+11:34:23.728 [http-nio-8081-exec-1] INFO  c.c.c.controller.ContactController - Retrieved contacts from the database.
+11:34:36.781 [http-nio-8081-exec-3] INFO  c.c.c.controller.ContactController - Created contact: Contact(id=1, firstName=Serg, lastName=Ustin, email=serg@mail.com, phone=+7999-123-4599)
+11:34:36.793 [http-nio-8081-exec-5] INFO  c.c.c.controller.ContactController - Retrieved contacts from the database.
+11:35:00.282 [http-nio-8081-exec-6] INFO  c.c.c.controller.ContactController - Edited contact with ID 1:Contact(id=1, firstName=Serg, lastName=Pupkin, email=serg@mail.com, phone=+7999-123-4599)
+11:35:00.290 [http-nio-8081-exec-7] INFO  c.c.c.controller.ContactController - Retrieved contacts from the database.
+11:35:04.114 [http-nio-8081-exec-8] INFO  c.c.c.controller.ContactController - Deleted contact with ID 1
+11:35:04.121 [http-nio-8081-exec-9] INFO  c.c.c.controller.ContactController - Retrieved contacts from the database.
+11:35:23.434 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+11:35:23.436 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+11:35:23.446 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

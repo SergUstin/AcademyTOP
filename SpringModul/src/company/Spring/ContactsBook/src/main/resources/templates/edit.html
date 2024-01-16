@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Edit Contact</title>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+            }
+            form {
+                text-align: center;
+                border: 1px solid #ccc;
+                padding: 20px;
+                width: 300px;
+                border-radius: 5px;
+            }
+            form label {
+                display: block;
+                margin-top: 10px;
+            }
+            form input {
+                margin-bottom: 10px;
+                padding: 5px;
+                border-radius: 3px;
+                border: 1px solid #ccc;
+            }
+            button {
+                padding: 10px 20px;
+                border-radius: 5px;
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
+            a {
+                text-decoration: none;
+                color: #4CAF50;
+            }
+        </style>
+    </head>
+
+    <body>
+    <div>
+        <h1>Edit Contact</h1>
+        <form th:action="@{/contacts/edit/{id}(id=${contact.id})}" method="post" th:object="${contact}">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" th:field="*{firstName}" required>
+            <br>
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" th:field="*{lastName}" required>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" th:field="*{email}" required placeholder="example@example.com">
+            <br>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" th:field="*{phone}" pattern="\+7[0-9]{3}-?[0-9]{3}-?[0-9]{4}" required placeholder="+7###-###-####">
+            <br>
+            <button type="submit">Save</button>
+        </form>
+        <br>
+        <a href="/contacts">Back to Contact List</a>
+    </div>
+    </body>
+</html>
