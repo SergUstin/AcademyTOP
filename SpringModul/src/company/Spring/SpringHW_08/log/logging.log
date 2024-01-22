@@ -1,0 +1,120 @@
+13:36:25.927 [main] INFO  c.c.s.SpringDBCApplication - Starting SpringDBCApplication using Java 17.0.9 with PID 12484 (C:\Users\Serg\Desktop\SpringHW_08\target\classes started by Serg in C:\Users\Serg\Desktop\SpringHW_08)
+13:36:25.930 [main] DEBUG c.c.s.SpringDBCApplication - Running with Spring Boot v3.2.1, Spring v6.1.2
+13:36:25.932 [main] INFO  c.c.s.SpringDBCApplication - No active profile set, falling back to 1 default profile: "default"
+13:36:26.640 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+13:36:26.700 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 49 ms. Found 1 JPA repository interface.
+13:36:27.191 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+13:36:27.206 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+13:36:27.207 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]
+13:36:27.270 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+13:36:27.271 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1290 ms
+13:36:27.433 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+13:36:27.545 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+13:36:27.598 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+13:36:27.923 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+13:36:27.955 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+13:36:28.261 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2e4ecdf8
+13:36:28.262 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+13:36:29.170 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+13:36:29.451 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+13:36:29.670 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+13:36:29.966 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
+13:36:29.972 [main] INFO  c.c.s.SpringDBCApplication - Started SpringDBCApplication in 4.59 seconds (process running for 5.604)
+13:36:29.974 [main] INFO  c.c.s.SpringDBCApplication - Application started
+13:36:56.971 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:36:56.971 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+13:36:56.972 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+13:36:56.992 [http-nio-8081-exec-1] INFO  c.c.s.controller.EmployeeController - GET /api/employees
+13:36:56.992 [http-nio-8081-exec-1] INFO  c.c.s.s.EmployeeCrudServiceImpl - Get all
+13:37:07.673 [http-nio-8081-exec-6] INFO  c.c.s.controller.EmployeeController - PUT /api/employees: com.company.springexample.dto.EmployeeDto@41ec6a01
+13:37:07.673 [http-nio-8081-exec-6] INFO  c.c.s.s.EmployeeCrudServiceImpl - Update
+13:37:44.203 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+13:37:44.308 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+13:37:44.314 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+13:37:48.118 [main] INFO  c.c.s.SpringDBCApplication - Starting SpringDBCApplication using Java 17.0.9 with PID 36560 (C:\Users\Serg\Desktop\SpringHW_08\target\classes started by Serg in C:\Users\Serg\Desktop\SpringHW_08)
+13:37:48.120 [main] DEBUG c.c.s.SpringDBCApplication - Running with Spring Boot v3.2.1, Spring v6.1.2
+13:37:48.121 [main] INFO  c.c.s.SpringDBCApplication - No active profile set, falling back to 1 default profile: "default"
+13:37:48.557 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+13:37:48.593 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 31 ms. Found 1 JPA repository interface.
+13:37:48.915 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+13:37:48.925 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+13:37:48.925 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]
+13:37:48.967 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+13:37:48.967 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 813 ms
+13:37:49.061 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+13:37:49.100 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+13:37:49.125 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+13:37:49.300 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+13:37:49.321 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+13:37:49.537 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2335aef2
+13:37:49.538 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+13:37:50.169 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+13:37:50.387 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+13:37:50.560 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+13:37:50.779 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
+13:37:50.785 [main] INFO  c.c.s.SpringDBCApplication - Started SpringDBCApplication in 3.024 seconds (process running for 3.471)
+13:37:50.787 [main] INFO  c.c.s.SpringDBCApplication - Application started
+13:37:57.045 [http-nio-8081-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:37:57.045 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+13:37:57.046 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+13:37:57.115 [http-nio-8081-exec-2] INFO  c.c.s.controller.EmployeeController - PUT /api/employees: com.company.springexample.dto.EmployeeDto@272ee225
+13:37:57.115 [http-nio-8081-exec-2] INFO  c.c.s.s.EmployeeCrudServiceImpl - Update
+13:38:00.373 [http-nio-8081-exec-3] INFO  c.c.s.controller.EmployeeController - PUT /api/employees: com.company.springexample.dto.EmployeeDto@6b11c2ce
+13:38:00.373 [http-nio-8081-exec-3] INFO  c.c.s.s.EmployeeCrudServiceImpl - Update
+13:38:02.102 [http-nio-8081-exec-5] INFO  c.c.s.controller.EmployeeController - PUT /api/employees: com.company.springexample.dto.EmployeeDto@2d3c7405
+13:38:02.103 [http-nio-8081-exec-5] INFO  c.c.s.s.EmployeeCrudServiceImpl - Update
+13:38:04.097 [http-nio-8081-exec-4] INFO  c.c.s.controller.EmployeeController - GET /api/employees
+13:38:04.097 [http-nio-8081-exec-4] INFO  c.c.s.s.EmployeeCrudServiceImpl - Get all
+13:39:18.682 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+13:39:19.037 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+13:39:19.042 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+13:39:20.768 [main] INFO  c.c.s.SpringDBCApplication - Starting SpringDBCApplication using Java 17.0.9 with PID 37296 (C:\Users\Serg\Desktop\SpringHW_08\target\classes started by Serg in C:\Users\Serg\Desktop\SpringHW_08)
+13:39:20.770 [main] DEBUG c.c.s.SpringDBCApplication - Running with Spring Boot v3.2.1, Spring v6.1.2
+13:39:20.770 [main] INFO  c.c.s.SpringDBCApplication - No active profile set, falling back to 1 default profile: "default"
+13:39:21.199 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+13:39:21.240 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 35 ms. Found 1 JPA repository interface.
+13:39:21.577 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+13:39:21.585 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+13:39:21.585 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]
+13:39:21.628 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+13:39:21.628 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 827 ms
+13:39:21.725 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+13:39:21.763 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+13:39:21.788 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+13:39:21.976 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+13:39:21.998 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+13:39:22.221 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2335aef2
+13:39:22.222 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+13:39:22.845 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+13:39:23.358 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+13:39:23.535 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+13:39:23.760 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
+13:39:23.767 [main] INFO  c.c.s.SpringDBCApplication - Started SpringDBCApplication in 3.353 seconds (process running for 3.81)
+13:39:23.768 [main] INFO  c.c.s.SpringDBCApplication - Application started
+13:39:55.472 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:39:55.472 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+13:39:55.473 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+13:39:55.540 [http-nio-8081-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('1' (code 49)): was expecting a colon to separate field name and value]
+13:40:21.395 [http-nio-8081-exec-4] INFO  c.c.s.controller.EmployeeController - PUT /api/employees: com.company.springexample.dto.EmployeeDto@6a2d00e4
+13:40:21.395 [http-nio-8081-exec-4] INFO  c.c.s.s.EmployeeCrudServiceImpl - Update
+13:40:24.787 [http-nio-8081-exec-5] INFO  c.c.s.controller.EmployeeController - PUT /api/employees: com.company.springexample.dto.EmployeeDto@5ebc62f3
+13:40:24.787 [http-nio-8081-exec-5] INFO  c.c.s.s.EmployeeCrudServiceImpl - Update
+13:40:25.495 [http-nio-8081-exec-6] INFO  c.c.s.controller.EmployeeController - PUT /api/employees: com.company.springexample.dto.EmployeeDto@1363a887
+13:40:25.495 [http-nio-8081-exec-6] INFO  c.c.s.s.EmployeeCrudServiceImpl - Update
+13:40:26.337 [http-nio-8081-exec-8] INFO  c.c.s.controller.EmployeeController - PUT /api/employees: com.company.springexample.dto.EmployeeDto@23f52368
+13:40:26.338 [http-nio-8081-exec-8] INFO  c.c.s.s.EmployeeCrudServiceImpl - Update
+13:40:30.058 [http-nio-8081-exec-9] INFO  c.c.s.controller.EmployeeController - GET /api/employees
+13:40:30.058 [http-nio-8081-exec-9] INFO  c.c.s.s.EmployeeCrudServiceImpl - Get all
+13:40:50.857 [http-nio-8081-exec-7] INFO  c.c.s.controller.EmployeeController - PUT /api/employees: com.company.springexample.dto.EmployeeDto@3ac1e11b
+13:40:50.857 [http-nio-8081-exec-7] INFO  c.c.s.s.EmployeeCrudServiceImpl - Update
+13:40:53.813 [http-nio-8081-exec-10] INFO  c.c.s.controller.EmployeeController - PUT /api/employees: com.company.springexample.dto.EmployeeDto@34ee60c0
+13:40:53.813 [http-nio-8081-exec-10] INFO  c.c.s.s.EmployeeCrudServiceImpl - Update
+13:40:56.451 [http-nio-8081-exec-2] INFO  c.c.s.controller.EmployeeController - PUT /api/employees: com.company.springexample.dto.EmployeeDto@63dd0aca
+13:40:56.451 [http-nio-8081-exec-2] INFO  c.c.s.s.EmployeeCrudServiceImpl - Update
+13:40:58.583 [http-nio-8081-exec-1] INFO  c.c.s.controller.EmployeeController - GET /api/employees
+13:40:58.583 [http-nio-8081-exec-1] INFO  c.c.s.s.EmployeeCrudServiceImpl - Get all
+13:41:10.995 [http-nio-8081-exec-3] INFO  c.c.s.controller.EmployeeController - GET /api/employees/4
+13:41:10.995 [http-nio-8081-exec-3] INFO  c.c.s.s.EmployeeCrudServiceImpl - Get by ID: 4
+13:43:50.538 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+13:43:52.788 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+13:43:52.793 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

@@ -1,0 +1,27 @@
+#Customer port
+server:
+  port: 8081
+
+#Customer logging app
+logging:
+  level:
+    root: info
+    com.company.springexample: debug
+  pattern:
+#    console: "%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"
+    file: "%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"
+  file:
+    name: log/logging.log
+
+#Connecting and configuring the database
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/test
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+
