@@ -1,0 +1,53 @@
+#Customer port
+server:
+  port: 8081
+
+#Customer logging app
+logging:
+  level:
+    root: info
+    com.company.springexample: debug
+  pattern:
+    #    console: "%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"
+    file: "%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"
+  file:
+    name: log/logging.log
+
+#Castomer comment length
+comment:
+  length:
+    max: 300
+
+#Connecting and configuring the database
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: root
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.xml
+    enabled: true
+    drop-first: false
+
+#  1) В той же папке, что и jar-файл
+#    - application.yml
+#    - application.jar
+#
+#  2) В той же папке, что и jar-файл
+#  - config/application.yml
+#  - application.jar
+#
+#  3) В classpath приложения (в папке resources)
+#
+#  4) В папке config в classpath приложения (resources/config)
+
+#Setting profile
+#spring.profile.active=dev
+#spring:
+#  profiles:
+#    active: prod
