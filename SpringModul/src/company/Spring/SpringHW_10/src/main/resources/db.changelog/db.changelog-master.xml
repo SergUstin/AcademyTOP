@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+
+    <changeSet id="createNewsTable" author="postgres">
+        <createTable tableName="news">
+            <column name="id" type="serial">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="title" type="varchar(255)"/>
+            <column name="text" type="varchar(255)"/>
+            <column name="creation_date" type="timestamp(6)"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="createCategoryTable" author="postgres">
+        <createTable tableName="category">
+            <column name="id" type="serial">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="title" type="varchar(255)"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="addNewColumn" author="postgres">
+        <addColumn tableName="news">
+            <column name="category_id" type="serial"/>
+        </addColumn>
+    </changeSet>
+
+    <changeSet id="addForeignKeyToNewsForCategory" author="postgres">
+        <addForeignKeyConstraint baseTableName="news"
+                                 baseColumnNames="category_id"
+                                 constraintName="fk_news_category"
+                                 referencedTableName="category"
+                                 referencedColumnNames="id"
+                                 onDelete="CASCADE" />
+    </changeSet>
+
+
+
+    <!--    <changeSet id="createArticleTable" author="postgres">-->
+    <!--        <createTable tableName="article">-->
+    <!--            <column name="id" type="serial">-->
+    <!--                <constraints primaryKey="true" />-->
+    <!--            </column>-->
+    <!--            <column name="title" type="varchar(255)"/>-->
+    <!--            <column name="content" type="varchar(255)" />-->
+    <!--            <column name="creation_time" type="timestamp(6)" />-->
+    <!--        </createTable>-->
+    <!--    </changeSet>-->
+
+    <!--    <changeSet id="renameCommentText" author="postgres">-->
+    <!--        <renameColumn tableName="comment" oldColumnName="comment_text" newColumnName="text"/>-->
+    <!--    </changeSet>-->
+    <!--    -->
+    <!--    <changeSet id="addNewColumn" author="postgres">-->
+    <!--        <addColumn tableName="comment">-->
+    <!--            <column name="article_id" type="serial"/>-->
+    <!--        </addColumn>-->
+    <!--    </changeSet>-->
+
+    <!--    <changeSet id="addForeignKeyToCommentForArticle" author="postgres">-->
+    <!--        <addForeignKeyConstraint baseTableName="comment"-->
+    <!--                                 baseColumnNames="article_id"-->
+    <!--                                 constraintName="fk_comment_article"-->
+    <!--                                 referencedTableName="article"-->
+    <!--                                 referencedColumnNames="id"-->
+    <!--                                 onDelete="CASCADE" />-->
+    <!--    </changeSet>-->
+
+    <!--    <changeSet id="addForeignKeyToCommentForAuthor" author="postgres">-->
+    <!--        <addForeignKeyConstraint baseTableName="comment"-->
+    <!--                                 baseColumnNames="author_id"-->
+    <!--                                 constraintName="fk_comment_author"-->
+    <!--                                 referencedTableName="author"-->
+    <!--                                 referencedColumnNames="id"-->
+    <!--                                 onDelete="CASCADE" />-->
+    <!--    </changeSet>-->
+
+
+    <!--    <changeSet id="1" author="postgres">-->
+    <!--        <createTable tableName="test">-->
+    <!--            <column name="id" type="int" autoIncrement="true">-->
+    <!--                <constraints primaryKey="true" nullable="false"/>-->
+    <!--            </column>-->
+    <!--            <column name="first_name" type="varchar(255)"/>-->
+    <!--            <column name="last_name" type="varchar(255)"/>-->
+    <!--        </createTable>-->
+    <!--    </changeSet>-->
+
+</databaseChangeLog>
