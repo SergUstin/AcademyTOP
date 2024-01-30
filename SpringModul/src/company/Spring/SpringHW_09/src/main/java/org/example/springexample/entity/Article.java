@@ -5,6 +5,7 @@ import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.FieldDefaults;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -27,6 +28,7 @@ public class Article {
     @Column(name = "content")
     String content;
 
+    @CreationTimestamp
     @Column(name = "creationTime")
     LocalDateTime creationTime;
 
