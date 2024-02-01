@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+
+    <changeSet id="createAuthorTable" author="postgres">
+        <createTable tableName="author">
+            <column name="id" type="serial">
+                <constraints primaryKey="true"/>b
+            </column>
+            <column name="first_name" type="varchar(255)"/>
+            <column name="last_name" type="varchar(255)"/>
+            <column name="rating" type="bigint"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="createCommentTable" author="postgres">
+        <createTable tableName="comment">
+            <column name="id" type="serial">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="creation_time" type="timestamp(6)"/>
+            <column name="comment_text" type="varchar(255)"/>
+            <column name="author_id" type="integer">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="createArticleTable" author="postgres">
+        <createTable tableName="article">
+            <column name="id" type="serial">
+                <constraints primaryKey="true" />
+            </column>
+            <column name="title" type="varchar(255)"/>
+            <column name="content" type="varchar(255)" />
+            <column name="creation_time" type="timestamp(6)" />
+        </createTable>
+    </changeSet>
+
+    <changeSet id="renameCommentText" author="postgres">
+        <renameColumn tableName="comment" oldColumnName="comment_text" newColumnName="text"/>
+    </changeSet>
+    
+    <changeSet id="addNewColumn" author="postgres">
+        <addColumn tableName="comment">
+            <column name="article_id" type="serial"/>
+        </addColumn>
+    </changeSet>
+
+<!--    <changeSet id="1" author="postgres">-->
+<!--        <createTable tableName="test">-->
+<!--            <column name="id" type="int" autoIncrement="true">-->
+<!--                <constraints primaryKey="true" nullable="false"/>-->
+<!--            </column>-->
+<!--            <column name="first_name" type="varchar(255)"/>-->
+<!--            <column name="last_name" type="varchar(255)"/>-->
+<!--        </createTable>-->
+<!--    </changeSet>-->
+
+</databaseChangeLog>

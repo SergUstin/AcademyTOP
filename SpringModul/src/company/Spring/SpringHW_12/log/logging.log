@@ -1,0 +1,76 @@
+13:29:52.559 [main] INFO  o.e.s.s.CommentsCrudServiceTest - Starting CommentsCrudServiceTest using Java 17.0.9 with PID 36628 (started by Serg in C:\Users\Serg\Desktop\SpringHW_09)
+13:29:52.566 [main] INFO  o.e.s.s.CommentsCrudServiceTest - No active profile set, falling back to 1 default profile: "default"
+13:29:53.304 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+13:29:53.378 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 62 ms. Found 3 JPA repository interfaces.
+13:29:53.841 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+13:29:54.157 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@29d405e6
+13:29:54.159 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+13:29:54.396 [main] INFO  liquibase.database - Set default schema name to public
+13:29:54.769 [main] INFO  liquibase.changelog - Reading from public.databasechangelog
+13:29:54.779 [main] INFO  liquibase.executor - Changelog query completed.
+13:29:54.834 [main] INFO  liquibase.executor - Changelog query completed.
+13:29:54.836 [main] INFO  liquibase.executor - Changelog query completed.
+13:29:54.842 [main] INFO  liquibase.executor - Changelog query completed.
+13:29:54.843 [main] INFO  liquibase.lockservice - Successfully acquired change log lock
+13:29:54.891 [main] INFO  liquibase.executor - Changelog query completed.
+13:29:54.892 [main] INFO  liquibase.executor - Changelog query completed.
+13:29:54.893 [main] INFO  liquibase.changelog - Reading from public.databasechangelog
+13:29:54.894 [main] INFO  liquibase.executor - Changelog query completed.
+13:29:54.895 [main] INFO  liquibase.executor - Changelog query completed.
+13:29:55.046 [main] INFO  liquibase.changelog - Table author created
+13:29:55.048 [main] INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-master.xml::createAuthorTable::postgres ran successfully in 124ms
+13:29:55.050 [main] INFO  liquibase.executor - Changelog query completed.
+13:29:55.052 [main] INFO  liquibase.executor - Changelog query completed.
+13:29:55.066 [main] INFO  liquibase.changelog - Table comment created
+13:29:55.067 [main] INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-master.xml::createCommentTable::postgres ran successfully in 13ms
+13:29:55.068 [main] INFO  liquibase.executor - Changelog query completed.
+13:29:55.174 [main] INFO  liquibase.changelog - Table article created
+13:29:55.174 [main] INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-master.xml::createArticleTable::postgres ran successfully in 104ms
+13:29:55.176 [main] INFO  liquibase.executor - Changelog query completed.
+13:29:55.178 [main] INFO  liquibase.changelog - Column comment.comment_text renamed to text
+13:29:55.179 [main] INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-master.xml::renameCommentText::postgres ran successfully in 2ms
+13:29:55.180 [main] INFO  liquibase.executor - Changelog query completed.
+13:29:55.184 [main] INFO  liquibase.changelog - Columns article_id(serial) added to comment
+13:29:55.185 [main] INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-master.xml::addNewColumn::postgres ran successfully in 4ms
+13:29:55.186 [main] INFO  liquibase.executor - Changelog query completed.
+13:29:55.187 [main] INFO  liquibase - Update command completed successfully.
+13:29:55.189 [main] INFO  liquibase.executor - Changelog query completed.
+13:29:55.189 [main] INFO  liquibase.lockservice - Successfully released change log lock
+13:29:55.293 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+13:29:55.410 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.7.Final
+13:29:55.413 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+13:29:55.635 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+13:29:55.760 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+13:29:56.128 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+13:29:56.836 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13:29:56.839 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+13:29:57.282 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+13:29:57.627 [main] INFO  o.e.s.s.CommentsCrudServiceTest - Started CommentsCrudServiceTest in 5.446 seconds (process running for 6.281)
+13:29:58.408 [main] INFO  o.e.s.services.CommentsCrudService - Update
+13:29:58.438 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+13:29:58.440 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+13:29:58.444 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+13:32:23.421 [main] INFO  o.e.s.s.CommentsCrudServiceTest - Starting CommentsCrudServiceTest using Java 17.0.9 with PID 53080 (started by Serg in C:\Users\Serg\Desktop\SpringHW_09)
+13:32:23.423 [main] INFO  o.e.s.s.CommentsCrudServiceTest - No active profile set, falling back to 1 default profile: "default"
+13:32:23.869 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+13:32:23.924 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 44 ms. Found 3 JPA repository interfaces.
+13:32:24.279 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+13:32:24.618 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6010d0d1
+13:32:24.619 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+13:32:24.735 [main] INFO  liquibase.database - Set default schema name to public
+13:32:25.008 [main] INFO  liquibase.changelog - Reading from public.databasechangelog
+13:32:25.015 [main] INFO  liquibase.executor - Changelog query completed.
+13:32:25.105 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+13:32:25.188 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.7.Final
+13:32:25.190 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+13:32:25.359 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+13:32:25.488 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+13:32:25.759 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+13:32:26.331 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13:32:26.334 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+13:32:26.685 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+13:32:26.964 [main] INFO  o.e.s.s.CommentsCrudServiceTest - Started CommentsCrudServiceTest in 3.845 seconds (process running for 4.754)
+13:32:27.739 [main] INFO  o.e.s.services.CommentsCrudService - Create
+13:32:27.769 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+13:32:27.772 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+13:32:27.775 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
